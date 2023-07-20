@@ -6,7 +6,9 @@ const app = fastify()
 
 // GET, POST, PUT, PATCH, DELETE
 
-app.register(transactionRoutes)
+app.register(transactionRoutes, {
+  prefix: 'transactions',
+})
 
 app
   .listen({
